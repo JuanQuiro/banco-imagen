@@ -114,25 +114,6 @@ const FeaturedImagesSection = () => {
   return (
     <section className="py-8 sm:py-12 px-4">
       <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Imágenes destacadas</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="relative group">
-            <Image
-              alt={`Imagen destacada ${i + 1}`}
-              className="rounded-lg object-cover w-full h-48 sm:h-56 md:h-64"
-              height="300"
-              src="/1.jpg"
-              style={{ aspectRatio: "400/300", objectFit: "cover" }}
-              width="400"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-              <Button className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" variant="secondary">
-                <Heart className="w-5 h-5 mr-2" /> Me gusta
-              </Button>
-            </div>
-          </div>
-        ))}
-      </div>
       <div className="text-center mt-6 sm:mt-8">
         <Button>Ver más imágenes</Button>
       </div>

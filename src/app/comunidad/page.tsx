@@ -284,15 +284,6 @@ export default function Community() {
           </AnimatePresence>
         </div>
       </main>
-      {currentPostId !== null && (
-        <CommentModal
-          isOpen={commentModalOpen}
-          onClose={() => setCommentModalOpen(false)}
-          comments={posts.find(post => post.id === currentPostId)?.comments || []}
-          postId={currentPostId}
-          onAddComment={addComment}
-        />
-      )}
     </div>
   )
 }
